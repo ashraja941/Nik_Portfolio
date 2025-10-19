@@ -4,7 +4,6 @@ import { useEffect, useRef, useState, useMemo } from 'react';
 export default function Gallery({ projects, layout }) {
   const [open, setOpen] = useState(false);
   const [pIdx, setPIdx] = useState(0);
-  const [iIdx, setIIdx] = useState(0);
   const returnRef = useRef(null);
   const dlgRef = useRef(null);
 
@@ -34,8 +33,6 @@ export default function Gallery({ projects, layout }) {
       dlg.showModal?.();
       const onKey = (e) => {
         if (e.key === 'Escape') { e.preventDefault(); close(); }
-        if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
-        if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
       };
       document.addEventListener('keydown', onKey);
       return () => document.removeEventListener('keydown', onKey);
@@ -44,9 +41,8 @@ export default function Gallery({ projects, layout }) {
     }
   }, [open]);
 
-  function openAt(projectIndex, imageIndex, el) {
+  function openAt(projectIndex, el) {
     setPIdx(projectIndex);
-    setIIdx(imageIndex);
     returnRef.current = el ?? (document.activeElement);
     setOpen(true);
   }
@@ -54,15 +50,6 @@ export default function Gallery({ projects, layout }) {
   function close() {
     setOpen(false);
     queueMicrotask(() => { returnRef.current?.focus?.(); });
-  }
-
-  function prev() {
-    const len = projects[pIdx].images.length;
-    setIIdx((i) => (i - 1 + len) % len);
-  }
-  function next() {
-    const len = projects[pIdx].images.length;
-    setIIdx((i) => (i + 1) % len);
   }
 
   return (
@@ -81,7 +68,7 @@ export default function Gallery({ projects, layout }) {
               <a
                 className="card__link"
                 href={`#${p.slug}`}
-                onClick={(e) => { e.preventDefault(); openAt(p._index, startIndex, e.currentTarget); }}
+                onClick={(e) => { e.preventDefault(); openAt(p._index, e.currentTarget); }}
               >
                 <div className="card__imgwrap" style={{ aspectRatio: (p.aspectRatio || '4/3') }}>
                   <img className="card__img" src={cover.url} alt={cover.alt || ''} loading="lazy" decoding="async" />
@@ -101,13 +88,17 @@ export default function Gallery({ projects, layout }) {
           <button className="btn" onClick={close} aria-label="Close">×</button>
         </div>
         {open && (
-          <figure className="lightbox__figure">
-            <img src={projects[pIdx].images[iIdx].url} alt={projects[pIdx].images[iIdx].alt || ''} />
-            <figcaption id="lbCaption">
-              {projects[pIdx].title}
-              {projects[pIdx].images[iIdx].alt ? ' — ' + projects[pIdx].images[iIdx].alt : ''}
-            </figcaption>
-          </figure>
+          <div className="lightbox__scroll-container">
+            {projects[pIdx].images.map((image, index) => (
+              <figure key={index} className="lightbox__figure">
+                <img src={image.url} alt={image.alt || ''} />
+                <figcaption id={`lbCaption-${index}`}>
+                  {projects[pIdx].title}
+                  {image.alt ? ' — ' + image.alt : ''}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
         )}
       </dialog>
     </>

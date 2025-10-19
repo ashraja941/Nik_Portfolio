@@ -43,13 +43,14 @@ img{max-width:100%;display:block}
 .card__link:focus{outline:2px solid var(--accent);outline-offset:3px}
 
 /* Lightbox */
-dialog#lightbox{border:none;border-radius:var(--radius);padding:0;max-width:min(92vw,1100px);width:fit-content}
+dialog#lightbox{border:none;border-radius:var(--radius);padding:0;max-width:95vw;width:95vw;max-height:90vh;height:90vh;overflow:hidden;}
 dialog::backdrop{background:rgba(0,0,0,.5)}
-.lightbox__chrome{display:flex;gap:8px;justify-content:flex-end;padding:8px;background:rgba(255,255,255,.9)}
+.lightbox__chrome{display:flex;gap:8px;justify-content:flex-end;padding:8px;background:rgba(255,255,255,.9);position:absolute;top:0;right:0;z-index:1;}
 .btn{border:1px solid #ddd;border-radius:12px;background:#fff;padding:4px 8px;cursor:pointer}
 .btn:focus{outline:2px solid var(--accent);outline-offset:2px}
-.lightbox__figure{margin:0;padding:8px;background:#fff}
-.lightbox__figure img{max-height:75vh;height:auto;width:auto}
+.lightbox__scroll-container{height:100%;overflow-y:auto;padding:16px;}
+.lightbox__figure{margin:0 auto 16px;padding:0;background:#fff;width:fit-content;}
+.lightbox__figure img{max-height:none;height:auto;width:auto;max-width:100%;}
 #lbCaption{margin-top:8px;color:var(--muted);font-size:.95rem}
 
 /* About Page */
