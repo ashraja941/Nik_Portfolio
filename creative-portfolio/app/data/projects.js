@@ -7,12 +7,12 @@ export const PROJECTS = [
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_04_k3r1yh.jpg', alt: 'Magazine cover design' },
     aspectRatio: '16/9',
     images: [
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_04_k3r1yh.jpg', alt: 'Magazine cover design', layout: { col: 2 } },
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842583/Magazine_Cover_m9twcy.jpg', alt: 'Magazine cover' },
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842578/Magazine_30_dhz6es.jpg', alt: 'Magazine page 30' },
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842576/Magazine_29_opgp5z.jpg', alt: 'Magazine page 29' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_04_k3r1yh.jpg', alt: 'Magazine cover design' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842583/Magazine_Cover_m9twcy.jpg', alt: 'Magazine cover', showCaption: false },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842578/Magazine_30_dhz6es.jpg', alt: 'Magazine page 30', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842576/Magazine_29_opgp5z.jpg', alt: 'Magazine page 29', layout: { colSpan: 2 } },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842574/Magazine_27_ybpva3.jpg', alt: 'Magazine page 27' },
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842575/Magazine_28_mohd5u.jpg', alt: 'Magazine page 28' , layout: { col: 2 }},
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842575/Magazine_28_mohd5u.jpg', alt: 'Magazine page 28'},
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842573/Magazine_26_pumyvu.jpg', alt: 'Magazine page 26' }
     ]
   },

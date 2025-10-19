@@ -52,6 +52,7 @@ dialog::backdrop{background:rgba(0,0,0,.5)}
 .lightbox__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
   gap: var(--gap);
   height: 100%;
   overflow-y: auto;

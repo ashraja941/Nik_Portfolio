@@ -90,12 +90,21 @@ export default function Gallery({ projects, layout }) {
         {open && (
           <div className="lightbox__grid">
             {projects[pIdx].images.map((image, index) => (
-              <figure key={index} className={`lightbox__figure ${image.layout?.col === 2 ? 'span-2' : ''}`}>
+              <figure
+                key={index}
+                className="lightbox__figure"
+                style={{
+                  gridColumn: `span ${image.layout?.colSpan || 1}`,
+                  gridRow: `span ${image.layout?.rowSpan || 1}`,
+                }}
+              >
                 <img src={image.url} alt={image.alt || ''} />
-                <figcaption id={`lbCaption-${index}`}>
-                  {projects[pIdx].title}
-                  {image.alt ? ' — ' + image.alt : ''}
-                </figcaption>
+                {image.showCaption !== false && (
+                  <figcaption id={`lbCaption-${index}`}>
+                    {projects[pIdx].title}
+                    {image.alt ? ' — ' + image.alt : ''}
+                  </figcaption>
+                )}
               </figure>
             ))}
           </div>
