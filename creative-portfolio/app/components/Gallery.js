@@ -96,11 +96,9 @@ export default function Gallery({ projects, layout }) {
         })}
       </div>
 
-      <dialog ref={dlgRef} id="lightbox" aria-label="Image viewer" aria-describedby="lbCaption">
+      <dialog ref={dlgRef} id="lightbox" aria-label="Image viewer" aria-describedby="lbCaption" onClick={(e) => { if (e.target === dlgRef.current) close(); }}>
         <div className="lightbox__chrome">
           <button className="btn" onClick={close} aria-label="Close">×</button>
-          <button className="btn" onClick={prev} aria-label="Previous">←</button>
-          <button className="btn" onClick={next} aria-label="Next">→</button>
         </div>
         {open && (
           <figure className="lightbox__figure">
