@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Resume() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
       <h1 className="text-4xl font-bold mb-4">Resume</h1>
       <p className="mb-8">
         You can download my full resume{' '}
