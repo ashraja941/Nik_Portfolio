@@ -1,4 +1,3 @@
-
 # agents.md — Minimal Next.js + Bun System
 
 > Single-source manual for a **lean Next.js on Vercel** setup using **Bun** as the package manager. Minimal deps, vanilla CSS/JS where possible, and **one data file** controls all projects & image URLs.
@@ -11,6 +10,13 @@
 * **One content file:** `app/data/projects.js` (titles, subtitles, image links, alt text, optional aspect ratio).
 * **Pages:** `/` with Work grid + About section; accessible **lightbox** powered by `<dialog>`.
 * **Deploy:** Push to Vercel; Bun lockfile auto-detected.
+
+---
+
+## Changelog
+
+*   **Multi-page Navigation**: Added `resume` and `contact` pages. Main navigation now links to `/`, `/about`, `/resume`, and `/contact`.
+*   **Lightbox Update**: The image gallery lightbox has been changed from a single-image view with arrow key navigation to a multi-image, scrollable modal. It can be closed by clicking on the backdrop.
 
 ---
 
