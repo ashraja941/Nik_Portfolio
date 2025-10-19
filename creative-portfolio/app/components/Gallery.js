@@ -88,9 +88,9 @@ export default function Gallery({ projects, layout }) {
           <button className="btn" onClick={close} aria-label="Close">×</button>
         </div>
         {open && (
-          <div className="lightbox__scroll-container">
+          <div className="lightbox__grid">
             {projects[pIdx].images.map((image, index) => (
-              <figure key={index} className="lightbox__figure">
+              <figure key={index} className={`lightbox__figure ${image.layout?.col === 2 ? 'span-2' : ''}`}>
                 <img src={image.url} alt={image.alt || ''} />
                 <figcaption id={`lbCaption-${index}`}>
                   {projects[pIdx].title}
