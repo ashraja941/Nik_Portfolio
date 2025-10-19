@@ -4,11 +4,12 @@ export const PROJECTS = [
     slug: 'main-feature',
     title: 'Main Feature Project',
     subtitle: 'Full-width hero card',
-    cover: { url: 'https://images.unsplash.com/photo-1517816428104-797678c7cf0d', alt: 'Dramatic hero shot placeholder' },
+    cover: { url: 'https://images.unsplash.com/photo-1516237336009-76a2b42dc352', alt: 'Test image' },
     aspectRatio: '16/9',
     images: [
       { url: 'https://images.unsplash.com/photo-1517816428104-797678c7cf0d', alt: 'Hero variant A' },
-      { url: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee', alt: 'Hero variant B' }
+      { url: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee', alt: 'Hero variant B' },
+      { url: 'https://images.unsplash.com/photo-1516237336009-76a2b42dc352', alt: 'Test image' }
     ]
   },
   {
