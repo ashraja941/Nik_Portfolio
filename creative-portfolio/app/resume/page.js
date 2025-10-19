@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Resume() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
+    <section className="section">
       <h1 className="text-4xl font-bold mb-4">Resume</h1>
       <p className="mb-8">
         You can download my full resume{' '}
@@ -12,15 +12,15 @@ export default function Resume() {
         .
       </p>
 
-      <section className="mb-8">
+      <div className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Education</h2>
         <div>
           <h3 className="text-xl font-semibold">University of Example</h3>
           <p className="text-gray-600">Bachelor of Science in Computer Science, 2018 - 2022</p>
         </div>
-      </section>
+      </div>
 
-      <section className="mb-8">
+      <div className="mb-8">
         <h2 className="text-2xl font-bold mb-4">Experience</h2>
         <div>
           <h3 className="text-xl font-semibold">Software Engineer at Tech Company</h3>
@@ -31,9 +31,9 @@ export default function Resume() {
             <li>Implemented new features and fixed bugs in existing codebase.</li>
           </ul>
         </div>
-      </section>
+      </div>
 
-      <section>
+      <div>
         <h2 className="text-2xl font-bold mb-4">Skills</h2>
         <ul className="list-disc list-inside">
           <li>JavaScript (React, Node.js)</li>
@@ -42,7 +42,7 @@ export default function Resume() {
           <li>SQL</li>
           <li>Git & GitHub</li>
         </ul>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
