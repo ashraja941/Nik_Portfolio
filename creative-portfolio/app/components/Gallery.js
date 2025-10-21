@@ -222,13 +222,7 @@ export default function Gallery({ projects, layout }) {
                         className="lightbox__figure"
                         style={isMulti ? { flexBasis: widthPercent, maxWidth: widthPercent } : undefined}
                       >
-                        <img src={image.url} alt={image.alt || ''} />
-                        {image.showCaption !== false && (
-                          <figcaption className="lightbox__caption">
-                            {projects[pIdx].title}
-                            {image.alt ? ' — ' + image.alt : ''}
-                          </figcaption>
-                        )}
+                         <img src={image.url} alt={image.alt || ''} />
                       </figure>
                     );
                   })}
