@@ -1,9 +1,35 @@
 'use client';
 import { useEffect, useRef, useState, useMemo } from 'react';
 
+function parseAspectRatio(value) {
+  if (typeof value !== 'string') return null;
+  const parts = value.split('/').map((part) => Number(part.trim()));
+  if (parts.length !== 2) return null;
+  const [w, h] = parts;
+  if (!Number.isFinite(w) || !Number.isFinite(h) || h === 0) return null;
+  return w / h;
+}
+
+function getProvidedRatio(image) {
+  if (!image) return null;
+  if (image.layout?.aspectRatio) {
+    return parseAspectRatio(image.layout.aspectRatio);
+  }
+  const layoutWidth = image.layout?.width;
+  const layoutHeight = image.layout?.height;
+  if (typeof layoutWidth === 'number' && typeof layoutHeight === 'number' && layoutHeight !== 0) {
+    return layoutWidth / layoutHeight;
+  }
+  if (typeof image.width === 'number' && typeof image.height === 'number' && image.height !== 0) {
+    return image.width / image.height;
+  }
+  return null;
+}
+
 export default function Gallery({ projects, layout }) {
   const [open, setOpen] = useState(false);
   const [pIdx, setPIdx] = useState(0);
+  const [imageRatios, setImageRatios] = useState({});
   const returnRef = useRef(null);
   const dlgRef = useRef(null);
 
@@ -52,6 +78,87 @@ export default function Gallery({ projects, layout }) {
     queueMicrotask(() => { returnRef.current?.focus?.(); });
   }
 
+  const lightboxRows = useMemo(() => {
+    const project = projects[pIdx];
+    if (!project?.images?.length) return [];
+
+    const rows = [];
+    let currentRow = [];
+
+    for (const image of project.images) {
+      const colSpan = image?.layout?.colSpan || 1;
+      if (colSpan === 2) {
+        if (currentRow.length) {
+          rows.push({
+            type: currentRow.length > 1 ? 'multi' : 'single',
+            images: currentRow,
+          });
+          currentRow = [];
+        }
+        rows.push({ type: 'full', images: [image] });
+        continue;
+      }
+
+      currentRow.push(image);
+      if (currentRow.length === 2) {
+        rows.push({ type: 'multi', images: currentRow });
+        currentRow = [];
+      }
+    }
+
+    if (currentRow.length) {
+      rows.push({
+        type: currentRow.length > 1 ? 'multi' : 'single',
+        images: currentRow,
+      });
+    }
+
+    return rows;
+  }, [projects, pIdx]);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    const project = projects[pIdx];
+    if (!project?.images?.length) return undefined;
+
+    const disposers = [];
+
+    project.images.forEach((image) => {
+      if (!image?.url) return;
+      const provided = getProvidedRatio(image);
+      if (provided) return;
+      if (imageRatios[image.url]) return;
+      if (typeof window === 'undefined') return;
+
+      const img = new window.Image();
+      const finalize = () => {
+        const ratio = img.naturalWidth && img.naturalHeight ? img.naturalWidth / img.naturalHeight : 1;
+        setImageRatios((prev) => {
+          if (prev[image.url]) return prev;
+          return { ...prev, [image.url]: ratio };
+        });
+      };
+      img.addEventListener('load', finalize);
+      img.addEventListener('error', finalize);
+      img.src = image.url;
+      disposers.push(() => {
+        img.removeEventListener('load', finalize);
+        img.removeEventListener('error', finalize);
+      });
+    });
+
+    return () => {
+      disposers.forEach((dispose) => dispose());
+    };
+  }, [open, pIdx, projects, imageRatios]);
+
+  const resolveImageRatio = (image) => {
+    const provided = getProvidedRatio(image);
+    if (provided) return provided;
+    if (image?.url && imageRatios[image.url]) return imageRatios[image.url];
+    return 1;
+  };
+
   return (
     <>
       <div className="grid" aria-live="polite">
@@ -83,60 +190,51 @@ export default function Gallery({ projects, layout }) {
         })}
       </div>
 
-      <dialog ref={dlgRef} id="lightbox" aria-label="Image viewer" aria-describedby="lbCaption" onClick={(e) => { if (e.target === dlgRef.current) close(); }}>
+      <dialog ref={dlgRef} id="lightbox" aria-label="Image viewer" onClick={(e) => { if (e.target === dlgRef.current) close(); }}>
         <div className="lightbox__chrome">
           <button className="btn" onClick={close} aria-label="Close">×</button>
         </div>
         {open && (
           <div className="lightbox__grid">
-            {(() => {
-              const images = projects[pIdx].images;
-              const rows = [];
-              let currentRow = [];
+            {lightboxRows.map((row, rowIndex) => {
+              if (!row.images.length) return null;
+              const isMulti = row.type === 'multi';
+              const rowClass = ['lightbox__row'];
+              if (row.type === 'full') rowClass.push('lightbox__row--full');
+              if (row.type === 'single') rowClass.push('lightbox__row--single');
+              if (isMulti) rowClass.push('lightbox__row--multi');
 
-              for (let i = 0; i < images.length; i++) {
-                const image = images[i];
-                const colSpan = image.layout?.colSpan || 1;
+              const totalRatio = isMulti
+                ? row.images.reduce((sum, image) => sum + resolveImageRatio(image), 0)
+                : null;
+              const safeTotalRatio = isMulti && totalRatio && totalRatio > 0 ? totalRatio : null;
 
-                if (colSpan === 2) {
-                  // Full width image - start new row
-                  if (currentRow.length > 0) {
-                    rows.push(currentRow);
-                    currentRow = [];
-                  }
-                  rows.push([image]);
-                  currentRow = [];
-                } else {
-                  // Single column image
-                  currentRow.push(image);
-                  if (currentRow.length === 2) {
-                    rows.push(currentRow);
-                    currentRow = [];
-                  }
-                }
-              }
-
-              // Add remaining images in current row
-              if (currentRow.length > 0) {
-                rows.push(currentRow);
-              }
-
-              return rows.map((row, rowIndex) => (
-                <div key={rowIndex} className="lightbox__row">
-                  {row.map((image, imageIndex) => (
-                    <figure key={`${rowIndex}-${imageIndex}`} className="lightbox__figure">
-                      <img src={image.url} alt={image.alt || ''} />
-                      {image.showCaption !== false && (
-                        <figcaption id={`lbCaption-${rowIndex}-${imageIndex}`}>
-                          {projects[pIdx].title}
-                          {image.alt ? ' — ' + image.alt : ''}
-                        </figcaption>
-                      )}
-                    </figure>
-                  ))}
+              return (
+                <div key={rowIndex} className={rowClass.join(' ')}>
+                  {row.images.map((image, imageIndex) => {
+                    const ratio = resolveImageRatio(image);
+                    const widthPercent = isMulti && safeTotalRatio
+                      ? `${(ratio / safeTotalRatio) * 100}%`
+                      : '100%';
+                    return (
+                      <figure
+                        key={`${rowIndex}-${imageIndex}`}
+                        className="lightbox__figure"
+                        style={isMulti ? { flexBasis: widthPercent, maxWidth: widthPercent } : undefined}
+                      >
+                        <img src={image.url} alt={image.alt || ''} />
+                        {image.showCaption !== false && (
+                          <figcaption className="lightbox__caption">
+                            {projects[pIdx].title}
+                            {image.alt ? ' — ' + image.alt : ''}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  })}
                 </div>
-              ));
-            })()}
+              );
+            })}
           </div>
         )}
       </dialog>
