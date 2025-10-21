@@ -89,24 +89,54 @@ export default function Gallery({ projects, layout }) {
         </div>
         {open && (
           <div className="lightbox__grid">
-            {projects[pIdx].images.map((image, index) => (
-              <figure
-                key={index}
-                className="lightbox__figure"
-                style={{
-                  gridColumn: `span ${image.layout?.colSpan || 1}`,
-                  gridRow: `span ${image.layout?.rowSpan || 1}`,
-                }}
-              >
-                <img src={image.url} alt={image.alt || ''} />
-                {image.showCaption !== false && (
-                  <figcaption id={`lbCaption-${index}`}>
-                    {projects[pIdx].title}
-                    {image.alt ? ' — ' + image.alt : ''}
-                  </figcaption>
-                )}
-              </figure>
-            ))}
+            {(() => {
+              const images = projects[pIdx].images;
+              const rows = [];
+              let currentRow = [];
+
+              for (let i = 0; i < images.length; i++) {
+                const image = images[i];
+                const colSpan = image.layout?.colSpan || 1;
+
+                if (colSpan === 2) {
+                  // Full width image - start new row
+                  if (currentRow.length > 0) {
+                    rows.push(currentRow);
+                    currentRow = [];
+                  }
+                  rows.push([image]);
+                  currentRow = [];
+                } else {
+                  // Single column image
+                  currentRow.push(image);
+                  if (currentRow.length === 2) {
+                    rows.push(currentRow);
+                    currentRow = [];
+                  }
+                }
+              }
+
+              // Add remaining images in current row
+              if (currentRow.length > 0) {
+                rows.push(currentRow);
+              }
+
+              return rows.map((row, rowIndex) => (
+                <div key={rowIndex} className="lightbox__row">
+                  {row.map((image, imageIndex) => (
+                    <figure key={`${rowIndex}-${imageIndex}`} className="lightbox__figure">
+                      <img src={image.url} alt={image.alt || ''} />
+                      {image.showCaption !== false && (
+                        <figcaption id={`lbCaption-${rowIndex}-${imageIndex}`}>
+                          {projects[pIdx].title}
+                          {image.alt ? ' — ' + image.alt : ''}
+                        </figcaption>
+                      )}
+                    </figure>
+                  ))}
+                </div>
+              ));
+            })()}
           </div>
         )}
       </dialog>
