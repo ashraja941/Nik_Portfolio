@@ -41,7 +41,7 @@ export const PROJECTS = [
     title: 'Antelope Canyon',
     subtitle: 'Natural landscape photography in Antelope Canyon',
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Antelope_Canyon_1_qbxdq2.jpg', alt: 'Antelope Canyon' },
-    aspectRatio: '16/9',
+    aspectRatio: '4/3',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Antelope_Canyon_1_qbxdq2.jpg', alt: 'Antelope Canyon 1', layout: { colSpan: 2 } },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Antelope_Canyon_2_dn2n1m.jpg', alt: 'Antelope Canyon 2' },
@@ -96,13 +96,57 @@ export const PROJECTS = [
     ]
   },
   // Cover Collection
+  
+  // Main Portfolio Collection
+  {
+    slug: 'main-portfolio',
+    title: 'Main Portfolio',
+    subtitle: 'A collection of photography work',
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439614/MainPortfolio/Thumbnail_Landscape.jpg', alt: 'Main Portfolio' },
+    aspectRatio: '16/9',
+    images: [
+      // Landscape
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439597/MainPortfolio/Landscape_1.jpg', alt: 'Landscape 1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439598/MainPortfolio/Landscape_2.jpg', alt: 'Landscape 2' },
+      // Macro
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439599/MainPortfolio/Macro_1.jpg', alt: 'Macro 1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439599/MainPortfolio/Macro_2.jpg', alt: 'Macro 2' },
+      // Portraiture - Set 1
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439600/MainPortfolio/Portraiture_1-1.jpg', alt: 'Portraiture 1-1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439601/MainPortfolio/Portraiture_1-2.jpg', alt: 'Portraiture 1-2' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439602/MainPortfolio/Portraiture_1-3.jpg', alt: 'Portraiture 1-3' },
+      // Portraiture - Set 2
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439603/MainPortfolio/Portraiture_2-1.jpg', alt: 'Portraiture 2-1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439603/MainPortfolio/Portraiture_2-2.jpg', alt: 'Portraiture 2-2' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439604/MainPortfolio/Portraiture_2-3.jpg', alt: 'Portraiture 2-3' },
+      // Portraiture - Set 3
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439604/MainPortfolio/Portraiture_3-1.jpg', alt: 'Portraiture 3-1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439605/MainPortfolio/Portraiture_3-2.jpg', alt: 'Portraiture 3-2' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439606/MainPortfolio/Portraiture_3-3.jpg', alt: 'Portraiture 3-3' },
+      // Portraiture - Set 4
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439607/MainPortfolio/Portraiture_4-1.jpg', alt: 'Portraiture 4-1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439608/MainPortfolio/Portraiture_4-2.jpg', alt: 'Portraiture 4-2' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439608/MainPortfolio/Portraiture_4-3.jpg', alt: 'Portraiture 4-3' },
+      // Product
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439609/MainPortfolio/Product_1.jpg', alt: 'Product 1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439610/MainPortfolio/Product_2.jpg', alt: 'Product 2' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439612/MainPortfolio/Product_3.jpg', alt: 'Product 3' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439613/MainPortfolio/Product_4.jpg', alt: 'Product 4' },
+      // Travel
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439618/MainPortfolio/Travel_1.jpg', alt: 'Travel 1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439619/MainPortfolio/Travel_2.jpg', alt: 'Travel 2' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439619/MainPortfolio/Travel_3.jpg', alt: 'Travel 3' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439620/MainPortfolio/Travel_4.jpg', alt: 'Travel 4' },
+    ]
+  },
 ];
 
 export const LAYOUT = {
   homeGrid: [
-    { slug: 'antelope-canyon', coverIndex: 0, span: { md: 2, lg: 2 } },
+    { slug: 'main-portfolio', coverIndex: 0, span: { md: 2, lg: 2 } },
+    { slug: 'antelope-canyon', coverIndex: 0},
     { slug: 'portraiture-set-1' },
     { slug: 'portraiture-set-2' },
-    { slug: 'magazine-collection', coverIndex: 0, span: { md: 2, lg: 2 } },
+    { slug: 'magazine-collection', coverIndex: 0},
   ]
 };

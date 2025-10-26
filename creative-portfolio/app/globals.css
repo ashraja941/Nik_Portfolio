@@ -111,9 +111,10 @@ dialog::backdrop{background:rgba(0,0,0,.5)}
 .about-page__title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin: 0 0 100px 0;
+  margin: 0 0 150px 0;
   color: var(--ink);
   letter-spacing: 0.08em;
+  text-align: center;
 }
 
 .about-page__content {
@@ -134,7 +135,7 @@ dialog::backdrop{background:rgba(0,0,0,.5)}
 .about-page__image {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .about-page__portrait-placeholder {
@@ -214,4 +215,116 @@ dialog::backdrop{background:rgba(0,0,0,.5)}
 
 .about-section__content p:last-child {
   margin-bottom: 0;
+}
+
+/* Contact Page */
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  color: var(--ink);
+  letter-spacing: 0.08em;
+}
+
+.contact-intro {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contact-card {
+  background: white;
+  padding: 32px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icon-phone {
+  font-size: 32px;
+}
+
+.contact-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+
+.contact-card-value {
+  font-size: 1rem;
+  color: var(--accent);
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
+.contact-card-description {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.contact-availability {
+  background: white;
+  padding: 32px;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.availability-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+
+.availability-text {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
 }

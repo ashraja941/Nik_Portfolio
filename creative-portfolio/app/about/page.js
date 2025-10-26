@@ -23,10 +23,10 @@ export default function AboutPage() {
               <h3 className="about-section__title">ABOUT ME</h3>
               <div className="about-section__content">
                 <p>
-                  I am a visual storyteller with a passion for art and design. I hold a Bachelor's degree in Visual Communication and am currently pursuing a Master's in Digital Marketing. My journey in the creative field began over a decade ago, and since then, I've had the privilege of working on a diverse range of projects, from brand identities to captivating visual narratives.
+                  Hey! I'm Nikila, a visual storyteller at heart with a passion for bringing ideas to life through art and design. I completed my Bachelor's degree in Visual Communication, where I explored everything from fine arts and graphic design to photography and video production. I'm now pursuing my Master's in Digital Marketing, blending creativity with strategy to tell impactful stories that connect with people.
                 </p>
                 <p>
-                  I believe that art is a powerful form of expression and creativity is the bridge that connects us all. Whether I'm behind the lens or in front of a blank canvas, my goal is to craft experiences that resonate and inspire. Have a project in mind? Let's create something amazing together.
+                  Art has always been my way of expression and I'm always eager to learn and evolve. To me, creativity is about connection - taking a concept and telling a story, something that stays with people long after they've seen them.
                 </p>
               </div>
             </div>
@@ -36,10 +36,8 @@ export default function AboutPage() {
             <div className="about-section">
               <h3 className="about-section__title">EDUCATION</h3>
               <div className="about-section__content">
-                <p>B.Sc. Visual Communication</p>
-                <p>M.O.P. Vaishnav College | Chennai, India</p>
-                <p>M.Sc. Digital Marketing Strategy</p>
-                <p>Trinity College Dublin | Dublin, Ireland</p>
+                <p>B.Sc. Visual Communication, M.O.P. Vaishnav College | Chennai, India</p>
+                <p>M.Sc. Digital Marketing Strategy, Trinity College Dublin | Dublin, Ireland</p>
               </div>
             </div>
 
@@ -50,6 +48,16 @@ export default function AboutPage() {
                 <p>Adobe Photoshop</p>
                 <p>Adobe Lightroom</p>
                 <p>Adobe Illustrator</p>
+              </div>
+            </div>
+
+            <div className="about-section">
+              <h3 className="about-section__title">FLOW</h3>
+              <div className="about-section__content">
+                <p>Product</p>
+                <p>Macro</p>
+                <p>Landscape</p>
+                <p>Portraiture</p>
               </div>
             </div>
           </div>
