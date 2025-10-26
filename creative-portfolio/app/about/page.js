@@ -5,21 +5,31 @@ export default function AboutPage() {
       <div className="about-page__content">
         <div className="about-page__image">
           <div className="about-page__portrait-placeholder">
-            <span className="placeholder-text">Portrait Image</span>
+            <div className="portrait-circle"></div>
+            <span className="placeholder-text">Portrait</span>
           </div>
         </div>
         <div className="about-page__text">
           <div className="about-page__left-column">
-            <div className="about-section">
+            <div className="about-section about-card">
               <h3 className="about-section__title">PERSONAL INFO</h3>
               <div className="about-section__content">
-                <p>Name: Nikila S</p>
-                <p>Email: nikilasraja@gmail.com</p>
-                <p>Address: Dublin, Ireland</p>
+                <div className="info-item">
+                  <span className="info-label">Name</span>
+                  <span className="info-value">Nikila S</span>
+                </div>
+                <div className="info-item">
+                  <span className="info-label">Email</span>
+                  <a href="mailto:nikilasraja@gmail.com" className="info-value info-link">nikilasraja@gmail.com</a>
+                </div>
+                <div className="info-item">
+                  <span className="info-label">Location</span>
+                  <span className="info-value">Dublin, Ireland</span>
+                </div>
               </div>
             </div>
 
-            <div className="about-section">
+            <div className="about-section about-card">
               <h3 className="about-section__title">ABOUT ME</h3>
               <div className="about-section__content">
                 <p>
@@ -33,31 +43,42 @@ export default function AboutPage() {
           </div>
 
           <div className="about-page__right-column">
-            <div className="about-section">
+            <div className="about-section about-card">
               <h3 className="about-section__title">EDUCATION</h3>
               <div className="about-section__content">
-                <p>B.Sc. Visual Communication, M.O.P. Vaishnav College | Chennai, India</p>
-                <p>M.Sc. Digital Marketing Strategy, Trinity College Dublin | Dublin, Ireland</p>
+                <div className="education-item">
+                  <p className="degree">B.Sc. Visual Communication</p>
+                  <p className="school">M.O.P. Vaishnav College, Chennai, India</p>
+                </div>
+                <div className="education-item">
+                  <p className="degree">M.Sc. Digital Marketing Strategy</p>
+                  <p className="school">Trinity College Dublin, Dublin, Ireland</p>
+                </div>
               </div>
             </div>
 
-            <div className="about-section">
+            <div className="about-section about-card">
               <h3 className="about-section__title">SKILLS</h3>
               <div className="about-section__content">
-                <p>Photography, Photo Editing</p>
-                <p>Adobe Photoshop</p>
-                <p>Adobe Lightroom</p>
-                <p>Adobe Illustrator</p>
+                <div className="skills-chips">
+                  <span className="skill-chip">Photography</span>
+                  <span className="skill-chip">Photo Editing</span>
+                  <span className="skill-chip">Adobe Photoshop</span>
+                  <span className="skill-chip">Adobe Lightroom</span>
+                  <span className="skill-chip">Adobe Illustrator</span>
+                </div>
               </div>
             </div>
 
-            <div className="about-section">
+            <div className="about-section about-card">
               <h3 className="about-section__title">FLOW</h3>
               <div className="about-section__content">
-                <p>Product</p>
-                <p>Macro</p>
-                <p>Landscape</p>
-                <p>Portraiture</p>
+                <div className="flow-items">
+                  <span className="flow-item">Product</span>
+                  <span className="flow-item">Macro</span>
+                  <span className="flow-item">Landscape</span>
+                  <span className="flow-item">Portraiture</span>
+                </div>
               </div>
             </div>
           </div>
