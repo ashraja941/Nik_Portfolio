@@ -126,33 +126,31 @@ export default function Resume() {
         <div className="resume-section">
           <h2 className="resume-section-title">SKILLS</h2>
           <div className="resume-card">
-            <div className="skills-grid">
-              <div className="skill-category">
-                <h3 className="skill-category-title">Digital Marketing</h3>
-                <ul className="skill-list">
-                  <li>Google Ads</li>
-                  <li>Microsoft Excel</li>
-                  <li>SPSS</li>
-                  <li>Search Engine Optimization</li>
-                </ul>
+            <div className="skill-category">
+              <h3 className="skill-category-title">Digital Marketing</h3>
+              <div className="skills-chips">
+                <span className="skill-chip">Google Ads</span>
+                <span className="skill-chip">Microsoft Excel</span>
+                <span className="skill-chip">SPSS</span>
+                <span className="skill-chip">Search Engine Optimization</span>
               </div>
-              <div className="skill-category">
-                <h3 className="skill-category-title">Graphic Design</h3>
-                <ul className="skill-list">
-                  <li>Adobe Illustrator</li>
-                  <li>Adobe Photoshop</li>
-                  <li>Adobe InDesign</li>
-                  <li>3DS Max (3D Modelling)</li>
-                  <li>Canva</li>
-                </ul>
+            </div>
+            <div className="skill-category">
+              <h3 className="skill-category-title">Graphic Design</h3>
+              <div className="skills-chips">
+                <span className="skill-chip">Adobe Illustrator</span>
+                <span className="skill-chip">Adobe Photoshop</span>
+                <span className="skill-chip">Adobe InDesign</span>
+                <span className="skill-chip">3DS Max (3D Modelling)</span>
+                <span className="skill-chip">Canva</span>
               </div>
-              <div className="skill-category">
-                <h3 className="skill-category-title">Photography & Editing</h3>
-                <ul className="skill-list">
-                  <li>Adobe Lightroom</li>
-                  <li>Adobe Photoshop</li>
-                  <li>Video Editing</li>
-                </ul>
+            </div>
+            <div className="skill-category">
+              <h3 className="skill-category-title">Photography & Editing</h3>
+              <div className="skills-chips">
+                <span className="skill-chip">Adobe Lightroom</span>
+                <span className="skill-chip">Adobe Photoshop</span>
+                <span className="skill-chip">Video Editing</span>
               </div>
             </div>
           </div>

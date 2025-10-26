@@ -685,9 +685,18 @@ dialog::backdrop{background:rgba(0,0,0,.5)}
 }
 
 @media (min-width: 768px) {
-  .skills-grid {
+  .about-card .skills-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.resume-card .skill-category {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.resume-card .skill-category:last-child {
+  margin-bottom: 0;
 }
 
 .skill-category {
@@ -724,19 +733,16 @@ dialog::backdrop{background:rgba(0,0,0,.5)}
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 12px;
-  padding-left: 32px;
+  padding-left: 24px;
   position: relative;
 }
 
 .info-list li::before {
-  content: "";
+  content: "▸";
   position: absolute;
   left: 0;
-  top: 4px;
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
+  color: var(--accent);
+  font-weight: bold;
 }
 
 .info-list li:last-child {
