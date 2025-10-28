@@ -1,12 +1,19 @@
+import Image from 'next/image';
+
 export default function AboutPage() {
   return (
     <section className="section about-page">
-      <h2 className="about-page__title">ABOUT ME</h2>
+      <h1 className="about-page__title">ABOUT ME</h1>
       <div className="about-page__content">
-        <div className="about-page__image">
-          <div className="about-page__portrait-placeholder">
-            <div className="portrait-circle"></div>
-            <span className="placeholder-text">Portrait</span>
+        <div className="about-card about-page__image-card">
+          <div className="about-page__image-container">
+            <Image
+              src="https://res.cloudinary.com/dzc77rfds/image/upload/v1761617472/My_picture_jz8zam.jpg"
+              alt="Portrait of Nikila"
+              layout="fill"
+              objectFit="cover"
+              className="portrait-image"
+            />
           </div>
         </div>
         <div className="about-page__text">
@@ -66,18 +73,9 @@ export default function AboutPage() {
                   <span className="skill-chip">Adobe Photoshop</span>
                   <span className="skill-chip">Adobe Lightroom</span>
                   <span className="skill-chip">Adobe Illustrator</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="about-section about-card">
-              <h3 className="about-section__title">FLOW</h3>
-              <div className="about-section__content">
-                <div className="flow-items">
-                  <span className="flow-item">Product</span>
-                  <span className="flow-item">Macro</span>
-                  <span className="flow-item">Landscape</span>
-                  <span className="flow-item">Portraiture</span>
+                  <span className="skill-chip">Graphic Design</span>
+                  <span className="skill-chip">Adobe InDesign</span>
+                  <span className="skill-chip">Digital Marketing</span>
                 </div>
               </div>
             </div>
