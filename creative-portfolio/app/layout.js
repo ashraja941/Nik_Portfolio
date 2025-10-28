@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <header className="site-header">
-          <h1 className="brand">NIKILA</h1>
+          <h1 className="brand">NIKILA'S PORTFOLIO</h1>
           <nav>
             <a href="/">Work</a>
             <a href="/about">About</a>
