@@ -8,10 +8,7 @@ export default function Page() {
         <div className="section__intro">
           <h2 className="section__title">MY WORK</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.
-          </p>
-          <p>
-            Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
+Welcome to my creative playground. Here, you'll find a growing collection of my work, from graphic design concepts to photography projects. It's more than a portfolio—it's a  reflection of my artistic journey and continuous exploration across mediums.
           </p>
         </div>
         <Gallery projects={PROJECTS} layout={LAYOUT} />

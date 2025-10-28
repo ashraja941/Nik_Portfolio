@@ -2,8 +2,8 @@ export const PROJECTS = [
   // Portraiture Set 1
   {
     slug: 'portraiture-set-1',
-    title: 'Portraiture Collection 1',
-    subtitle: 'Professional portrait photography series',
+    title: 'Portraiture',
+    subtitle: 'An intimate, casual shoot with a friend.',
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616305/thumbnails/Portraiture.jpg', alt: 'Portraiture Collection 1' },
     aspectRatio: '4/3',
     images: [
@@ -19,8 +19,8 @@ export const PROJECTS = [
   // Portraiture Set 2
   {
     slug: 'portraiture-set-2',
-    title: 'Portraiture Collection 2',
-    subtitle: 'Second series of portrait photography',
+    title: 'Portraiture',
+    subtitle: 'Stories woven in silk- capturing Indian culture',
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616304/thumbnails/Portraiture_2.jpg', alt: 'Portraiture Collection 2' },
     aspectRatio: '4/3',
     images: [
@@ -54,8 +54,8 @@ export const PROJECTS = [
   // Magazine Collection
   {
     slug: 'magazine-collection',
-    title: 'Magazine Design Collection',
-    subtitle: 'Complete magazine layout and design work',
+    title: 'Onward- A Travel Magazine',
+    subtitle: 'A personal visual narrative of my journey through Singapore.',
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Onward_Magazine.jpg', alt: 'Magazine Collection' },
     aspectRatio: '4/3',
     images: [
@@ -99,8 +99,8 @@ export const PROJECTS = [
   // Main Portfolio Collection
   {
     slug: 'main-portfolio',
-    title: 'Main Portfolio',
-    subtitle: 'A collection of photography work',
+    title: 'Photography Portfolio',
+    subtitle: 'A collection of some of my favourite shots, spanning different subjects.',
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Photography_Portfolio.jpg', alt: 'Main Portfolio' },
     aspectRatio: '16/9',
     images: [
