@@ -1,11 +1,10 @@
-// Portfolio projects with Cloudinary images
 export const PROJECTS = [
   // Portraiture Set 1
   {
     slug: 'portraiture-set-1',
     title: 'Portraiture Collection 1',
     subtitle: 'Professional portrait photography series',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Portraiture_1_btduen.jpg', alt: 'Portraiture Collection 1' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616305/thumbnails/Portraiture.jpg', alt: 'Portraiture Collection 1' },
     aspectRatio: '4/3',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Portraiture_1_btduen.jpg', alt: 'Portrait 1' },
@@ -22,7 +21,7 @@ export const PROJECTS = [
     slug: 'portraiture-set-2',
     title: 'Portraiture Collection 2',
     subtitle: 'Second series of portrait photography',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Portraiture_1_rbjqyl.jpg', alt: 'Portraiture Collection 2' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616304/thumbnails/Portraiture_2.jpg', alt: 'Portraiture Collection 2' },
     aspectRatio: '4/3',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Portraiture_1_rbjqyl.jpg', alt: 'Portrait 1' },
@@ -40,7 +39,7 @@ export const PROJECTS = [
     slug: 'antelope-canyon',
     title: 'Antelope Canyon',
     subtitle: 'Natural landscape photography in Antelope Canyon',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Antelope_Canyon_1_qbxdq2.jpg', alt: 'Antelope Canyon' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616302/thumbnails/Antelope_Canyon.jpg', alt: 'Antelope Canyon' },
     aspectRatio: '4/3',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Antelope_Canyon_1_qbxdq2.jpg', alt: 'Antelope Canyon 1', layout: { colSpan: 2 } },
@@ -57,7 +56,7 @@ export const PROJECTS = [
     slug: 'magazine-collection',
     title: 'Magazine Design Collection',
     subtitle: 'Complete magazine layout and design work',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_Cover_m9twcy.jpg', alt: 'Magazine Collection' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Onward_Magazine.jpg', alt: 'Magazine Collection' },
     aspectRatio: '4/3',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_Cover_m9twcy.jpg', alt: 'Magazine Cover', layout: { colSpan: 2 } },
@@ -102,7 +101,7 @@ export const PROJECTS = [
     slug: 'main-portfolio',
     title: 'Main Portfolio',
     subtitle: 'A collection of photography work',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439614/MainPortfolio/Thumbnail_Landscape.jpg', alt: 'Main Portfolio' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Photography_Portfolio.jpg', alt: 'Main Portfolio' },
     aspectRatio: '16/9',
     images: [
       // Landscape
@@ -139,14 +138,29 @@ export const PROJECTS = [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439620/MainPortfolio/Travel_4.jpg', alt: 'Travel 4' },
     ]
   },
+  // 3D Design
+  {
+    slug: '3d-design',
+    title: '3D Design',
+    subtitle: 'A collection of 3D design work',
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616365/3d/Exterior_Gazebo_Design.png', alt: '3D Design' },
+    aspectRatio: '16/9',
+    images: [
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616365/3d/Exterior_Gazebo_Design.png', alt: 'Exterior Gazebo Design' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616366/3d/Interior_Design.png', alt: 'Interior Design' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616367/3d/Package_Design.jpg', alt: 'Package Design' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616368/3d/Set_Design.png', alt: 'Set Design' },
+    ]
+  },
 ];
 
 export const LAYOUT = {
   homeGrid: [
-    { slug: 'main-portfolio', coverIndex: 0, span: { md: 2, lg: 2 } },
-    { slug: 'antelope-canyon', coverIndex: 0},
+    { slug: 'main-portfolio', span: { md: 2, lg: 2 } },
+    { slug: 'antelope-canyon'},
     { slug: 'portraiture-set-1' },
     { slug: 'portraiture-set-2' },
-    { slug: 'magazine-collection', coverIndex: 0},
+    { slug: 'magazine-collection'},
+    { slug: '3d-design'},
   ]
 };
