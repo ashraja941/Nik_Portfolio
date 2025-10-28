@@ -59,7 +59,8 @@ export const PROJECTS = [
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Onward_Magazine.jpg', alt: 'Magazine Collection' },
     aspectRatio: '4/3',
     images: [
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_Cover_m9twcy.jpg', alt: 'Magazine Cover', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Onward_Magazine.jpg', alt: 'Magazine Collection', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_Cover_m9twcy.jpg', alt: 'Magazine Cover'},
       // { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/front_cover_msh26a.jpg', alt: 'Front Cover' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_1_xmgs9k.jpg', alt: 'Magazine Page 1' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_02_gj2jsy.jpg', alt: 'Magazine Page 2' },
@@ -104,6 +105,7 @@ export const PROJECTS = [
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Photography_Portfolio.jpg', alt: 'Main Portfolio' },
     aspectRatio: '16/9',
     images: [
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Photography_Portfolio.jpg', alt: 'Main Portfolio' },
       // Landscape
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439597/MainPortfolio/Landscape_1.jpg', alt: 'Landscape 1' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439598/MainPortfolio/Landscape_2.jpg', alt: 'Landscape 2' },
