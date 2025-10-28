@@ -41,7 +41,7 @@ export default function Contact() {
             <p className="contact-card-description">Connect professionally</p>
           </a>
 
-          <a href="https://www.behance.net" target="_blank" rel="noopener noreferrer" className="contact-card">
+          <a href="https://www.behance.net/nikilasraja" target="_blank" rel="noopener noreferrer" className="contact-card">
             <div className="contact-icon">
               <BehanceIcon />
             </div>

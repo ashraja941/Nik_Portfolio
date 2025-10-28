@@ -19,7 +19,7 @@ export default function Resume() {
               LinkedIn
             </a>
             <span className="divider">·</span>
-            <span className="contact-link">Behance</span>
+            <a href="https://www.behance.net/nikilasraja" target="_blank" rel="noopener noreferrer" className="contact-link">Behance</a>
           </div>
         </div>
 
