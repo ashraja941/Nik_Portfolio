@@ -107,7 +107,21 @@ export default function Resume() {
               <span className="leadership-dates">March 2025</span>
             </div>
             <p className="leadership-location">M.O.P. Vaishnav College, Chennai</p>
-            <p className="leadership-description">Lead a team of 10 to promote the event on digital and print media, and designed invites, posters, banners and social media posts.</p>
+            <ul className="experience-list">
+              <li> Lead a team of 10 to promote the event on digital and print media, and designed invites, posters, banners and social media posts. </li> 
+            </ul>
+          </div>
+
+          <div className="resume-card">
+            <div className="leadership-header">
+              <h3 className="leadership-title">Chief Journal Editor for department journal</h3>
+              <span className="leadership-dates">July 2024 - April 2025</span>
+            </div>
+            <p className="leadership-location">M.O.P. Vaishnav College, Chennai</p>
+            <ul className="experience-list">
+              <li> Managed the editorial team of 7 to collect, review and edit articles, artwork and photographs by students.  </li>
+              <li> Compiled and designed the annual department journal ‘Thumbnail’ using Adobe Photoshop and InDesign.  </li>
+            </ul>
           </div>
 
           <div className="resume-card">
@@ -121,6 +135,7 @@ export default function Resume() {
               <li>Created promotional assets including posters, videos and invites for social media and print media.</li>
             </ul>
           </div>
+
         </div>
 
         <div className="resume-section">
