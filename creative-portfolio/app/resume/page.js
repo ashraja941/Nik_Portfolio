@@ -20,6 +20,8 @@ export default function Resume() {
             </a>
             <span className="divider">·</span>
             <a href="https://www.behance.net/nikilasraja" target="_blank" rel="noopener noreferrer" className="contact-link">Behance</a>
+            <span className="divider">·</span>
+            <a href="https://drive.google.com/file/d/1G14XpTkc9quYyKPgiMZc3v4ZBM1kdBIk/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="contact-link">Download</a>
           </div>
         </div>
 
