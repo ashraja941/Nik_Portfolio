@@ -27,7 +27,10 @@ export default function Resume() {
           <h2 className="resume-section-title">PROFESSIONAL SUMMARY</h2>
           <div className="resume-card">
             <p className="resume-summary">
-              Proactive and creative Digital Marketing Masters student at Trinity College Dublin. Strong background in the creative arts like photography and graphic design, with hands-on experience creating and managing social media accounts. Strong communication and decision making skills developed through college programs and leadership experience, I am consistently willing to take initiative and drive projects forward in a professional environment. I'm passionate about building powerful stories crafted with compelling visuals that effectively drive audience engagement and resonate with people long after they've seen them.
+              Proactive and creative Digital Marketing Master’s student at Trinity College Dublin with a strong foundation in photography, graphic
+              design, and digital storytelling. Experienced in managing social media campaigns that build brand presence and drive audience
+              engagement. Recognized for strong communication, leadership, and decision-making skills developed through academic projects and
+              creative initiatives. Passionate about crafting compelling visual narratives that connect with audiences and leave a lasting impression.
             </p>
           </div>
         </div>

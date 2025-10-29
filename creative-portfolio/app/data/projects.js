@@ -4,7 +4,7 @@ export const PROJECTS = [
     slug: 'portraiture-set-1',
     title: 'Portraiture',
     subtitle: 'An intimate, casual shoot with a friend.',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616305/thumbnails/Portraiture.jpg', alt: 'Portraiture Collection 1' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616304/thumbnails/Portraiture_2.jpg', alt: 'Portraiture Collection 2' },
     aspectRatio: '4/3',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Portraiture_1_btduen.jpg', alt: 'Portrait 1' },
@@ -21,7 +21,7 @@ export const PROJECTS = [
     slug: 'portraiture-set-2',
     title: 'Portraiture',
     subtitle: 'Stories woven in silk- capturing Indian culture',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616304/thumbnails/Portraiture_2.jpg', alt: 'Portraiture Collection 2' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616305/thumbnails/Portraiture.jpg', alt: 'Portraiture Collection 1' },
     aspectRatio: '4/3',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Portraiture_1_rbjqyl.jpg', alt: 'Portrait 1' },
@@ -56,10 +56,10 @@ export const PROJECTS = [
     slug: 'magazine-collection',
     title: 'Onward- A Travel Magazine',
     subtitle: 'A personal visual narrative of my journey through Singapore.',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Onward_Magazine.jpg', alt: 'Magazine Collection' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761708330/magazine_cover_i09yrf.jpg', alt: 'Magazine Collection' },
     aspectRatio: '4/3',
     images: [
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Onward_Magazine.jpg', alt: 'Magazine Collection', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761708330/magazine_cover_i09yrf.jpg', alt: 'Magazine Collection' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_Cover_m9twcy.jpg', alt: 'Magazine Cover'},
       // { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/front_cover_msh26a.jpg', alt: 'Front Cover' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Magazine_1_xmgs9k.jpg', alt: 'Magazine Page 1' },
@@ -102,7 +102,7 @@ export const PROJECTS = [
     slug: 'main-portfolio',
     title: 'Photography Portfolio',
     subtitle: 'A collection of some of my favourite shots, spanning different subjects.',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Photography_Portfolio.jpg', alt: 'Main Portfolio' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761708329/mainPortfolioCover_csjrkl.jpg', alt: 'Main Portfolio' },
     aspectRatio: '16/9',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Photography_Portfolio.jpg', alt: 'Main Portfolio' },
