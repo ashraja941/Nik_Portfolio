@@ -67,6 +67,34 @@ dialog::backdrop{background:rgba(0,0,0,.5)}
   flex-wrap: nowrap;
 }
 
+.lightbox__section {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  width: 100%;
+  margin: 24px 0 8px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.lightbox__section:first-child {
+  margin-top: 0;
+}
+
+.lightbox__section-divider {
+  flex: 1 1 auto;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox__section-title {
+  margin: 0;
+  white-space: nowrap;
+}
+
 .lightbox__row--single .lightbox__figure,
 .lightbox__row--full .lightbox__figure {
   flex: 1 1 100%;

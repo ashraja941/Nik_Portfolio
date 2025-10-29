@@ -85,16 +85,25 @@ export default function Gallery({ projects, layout }) {
     const rows = [];
     let currentRow = [];
 
+    const flushCurrentRow = () => {
+      if (!currentRow.length) return;
+      rows.push({
+        type: currentRow.length > 1 ? 'multi' : 'single',
+        images: currentRow,
+      });
+      currentRow = [];
+    };
+
     for (const image of project.images) {
+      if (image?.heading) {
+        flushCurrentRow();
+        rows.push({ type: 'heading', heading: image.heading });
+        continue;
+      }
+
       const colSpan = image?.layout?.colSpan || 1;
       if (colSpan === 2) {
-        if (currentRow.length) {
-          rows.push({
-            type: currentRow.length > 1 ? 'multi' : 'single',
-            images: currentRow,
-          });
-          currentRow = [];
-        }
+        flushCurrentRow();
         rows.push({ type: 'full', images: [image] });
         continue;
       }
@@ -106,12 +115,7 @@ export default function Gallery({ projects, layout }) {
       }
     }
 
-    if (currentRow.length) {
-      rows.push({
-        type: currentRow.length > 1 ? 'multi' : 'single',
-        images: currentRow,
-      });
-    }
+    flushCurrentRow();
 
     return rows;
   }, [projects, pIdx]);
@@ -197,7 +201,17 @@ export default function Gallery({ projects, layout }) {
         {open && (
           <div className="lightbox__grid">
             {lightboxRows.map((row, rowIndex) => {
-              if (!row.images.length) return null;
+              if (row.type === 'heading') {
+                return (
+                  <div key={rowIndex} className="lightbox__section">
+                    <span className="lightbox__section-divider" aria-hidden="true" />
+                    <h4 className="lightbox__section-title">{row.heading}</h4>
+                    <span className="lightbox__section-divider" aria-hidden="true" />
+                  </div>
+                );
+              }
+
+              if (!row.images?.length) return null;
               const isMulti = row.type === 'multi';
               const rowClass = ['lightbox__row'];
               if (row.type === 'full') rowClass.push('lightbox__row--full');
