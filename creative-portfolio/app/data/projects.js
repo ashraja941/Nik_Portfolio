@@ -5,7 +5,7 @@ export const PROJECTS = [
     title: 'Portraiture',
     subtitle: 'Stories woven in silk- capturing Indian culture',
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616304/thumbnails/Portraiture_2.jpg', alt: 'Portraiture Collection 2' },
-    aspectRatio: '4/3',
+    aspectRatio: '16/9',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Portraiture_1_btduen.jpg', alt: 'Portrait 1' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1760842547/Portraiture_2_hwhhg0.jpg', alt: 'Portrait 2' },
@@ -162,8 +162,8 @@ export const PROJECTS = [
   // Rasoi
   {
     slug: 'rasoi',
-    title: 'Advertising Campaign',
-    subtitle: 'A visual journey through culinary artistry',
+    title: 'Marketing Campaign',
+    subtitle: 'A marketing campaign strategy for a fictional brand extension of Masaba - an Indian Fashion Designer',
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1764702612/Rasoi/1.jpg', alt: 'Rasoi' },
     aspectRatio: '16/9',
     images: [
@@ -232,11 +232,11 @@ export const PROJECTS = [
 export const LAYOUT = {
   homeGrid: [
     { slug: 'main-portfolio', span: { md: 2, lg: 2 } },
-    { slug: 'antelope-canyon'},
-    { slug: 'portraiture-set-1' },
-    { slug: 'portraiture-set-2' },
-    { slug: 'magazine-collection'},
-    { slug: '3d-design'},
     { slug: 'rasoi'},
+    { slug: 'portraiture-set-1' },
+    { slug: 'magazine-collection'},
+    { slug: 'antelope-canyon'},
+    { slug: 'portraiture-set-2' },
+    { slug: '3d-design'},
   ]
 };
