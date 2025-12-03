@@ -23,7 +23,7 @@ export default function AboutPage() {
               <div className="about-section__content">
                 <div className="info-item">
                   <span className="info-label">Name</span>
-                  <span className="info-value">Nikila S</span>
+                  <span className="info-value">Nikila Shanmuga Raja</span>
                 </div>
                 <div className="info-item">
                   <span className="info-label">Email</span>
