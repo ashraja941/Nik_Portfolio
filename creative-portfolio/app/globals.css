@@ -1,11 +1,12 @@
 :root{
   /* Updated palette */
-  --bg: #EEDAD3;       /* background */
+  --bg: #f9e5d5;       /* background */
   --ink: #222838;      /* primary text */
   --muted: #698A9C;    /* secondary text */
   --accent: #BD8C8C;   /* accent */
   --radius: 16px;
   --gap: 16px;
+  --work-bg: #f9e5d5;  /* My Work page background - very light grey, almost white */
 }
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
@@ -20,6 +21,11 @@ img{max-width:100%;display:block}
 .section{padding:24px 16px;max-width:1400px;margin:0 auto}
 .section h2{margin:0 0 12px}
 
+/* My Work page background */
+#work.section {
+  background: var(--work-bg);
+}
+
 /* Centered intro with two lines of copy */
 .section__intro{max-width:720px;margin:0 auto 24px;text-align:center}
 .section__title{letter-spacing:.08em;font-weight:700;margin:0 0 8px}
@@ -32,6 +38,56 @@ img{max-width:100%;display:block}
 /* Column span helpers driven by data/layout */
 @media (min-width: 640px){ .span-md-2{ grid-column: span 2; } }
 @media (min-width: 960px){ .span-lg-2{ grid-column: span 2; } }
+
+/* Grid headings */
+.grid-heading {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 32px 0 16px;
+  padding: 0;
+}
+
+.grid-heading:first-child {
+  margin-top: 0;
+}
+
+.grid-heading__text {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  position: relative;
+  display: inline-block;
+  padding: 0 24px;
+}
+
+.grid-heading__text::before,
+.grid-heading__text::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.3;
+}
+
+.grid-heading__text::before {
+  left: -80px;
+}
+
+.grid-heading__text::after {
+  right: -80px;
+}
+
+@media (max-width: 639px) {
+  .grid-heading__text::before,
+  .grid-heading__text::after {
+    display: none;
+  }
+}
 
 .card{background:transparent; border:none; box-shadow: none; transition: none; border-radius: var(--radius); overflow: hidden;}
 .card__imgwrap{aspect-ratio:4/3;overflow:hidden;background:transparent; border-radius: var(--radius); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;}

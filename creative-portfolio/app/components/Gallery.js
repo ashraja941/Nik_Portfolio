@@ -43,6 +43,7 @@ export default function Gallery({ projects, layout }) {
     if (layout?.homeGrid?.length) {
       return layout.homeGrid
         .map((entry) => {
+          if (entry.heading) return null;
           const p = bySlug.get(entry.slug);
           if (!p) return null;
           return { project: p, entry };
@@ -163,10 +164,37 @@ export default function Gallery({ projects, layout }) {
     return 1;
   };
 
+  const layoutItems = useMemo(() => {
+    if (layout?.homeGrid?.length) {
+      return layout.homeGrid.map((entry) => {
+        if (entry.heading) {
+          return { type: 'heading', heading: entry.heading };
+        }
+        const p = bySlug.get(entry.slug);
+        if (!p) return null;
+        return { type: 'project', project: p, entry };
+      }).filter(Boolean);
+    }
+    // Fallback: if no layout, show all projects
+    return projects.map((p) => ({ 
+      type: 'project', 
+      project: { ...p, _index: projects.indexOf(p) }, 
+      entry: {} 
+    }));
+  }, [layout, bySlug, projects]);
+
   return (
     <>
       <div className="grid" aria-live="polite">
-        {cards.map(({ project: p, entry }) => {
+        {layoutItems.map((item, index) => {
+          if (item.type === 'heading') {
+            return (
+              <div key={`heading-${index}`} className="grid-heading">
+                <h3 className="grid-heading__text">{item.heading}</h3>
+              </div>
+            );
+          }
+          const { project: p, entry } = item;
           const cover = typeof entry.coverIndex === 'number' ? p.images[entry.coverIndex] : p.cover || p.images[0];
           const startIndex = typeof entry.imageIndex === 'number' ? entry.imageIndex : (typeof entry.coverIndex === 'number' ? entry.coverIndex : 0);
           const cls = [

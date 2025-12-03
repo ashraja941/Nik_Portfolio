@@ -21,7 +21,7 @@ export default function Resume() {
             <span className="divider">·</span>
             <a href="https://www.behance.net/nikilasraja" target="_blank" rel="noopener noreferrer" className="contact-link">Behance</a>
             <span className="divider">·</span>
-            <a href="https://drive.google.com/file/d/1G14XpTkc9quYyKPgiMZc3v4ZBM1kdBIk/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="contact-link">Download Résumé</a>
+            <a href="https://drive.google.com/file/d/1sAgz38KfPHrqG46WKW9ooYSgs-7re3Hk/view?usp=sharing " target="_blank" rel="noopener noreferrer" className="contact-link">Download Résumé</a>
           </div>
         </div>
 
@@ -153,6 +153,10 @@ export default function Resume() {
                 <span className="skill-chip">Microsoft Excel</span>
                 <span className="skill-chip">SPSS</span>
                 <span className="skill-chip">Search Engine Optimization</span>
+                <span className="skill-chip">WIX</span>
+                <span className="skill-chip">UI/UX</span>
+                <span className="skill-chip">Social Media Marketing</span>
+                <span className="skill-chip">Blogs</span>
               </div>
             </div>
             <div className="skill-category">
@@ -160,13 +164,14 @@ export default function Resume() {
               <div className="skills-chips">
                 <span className="skill-chip">Adobe Illustrator</span>
                 <span className="skill-chip">Adobe Photoshop</span>
+                <span className="skill-chip">Adobe Premier Pro</span>
                 <span className="skill-chip">Adobe InDesign</span>
                 <span className="skill-chip">3DS Max (3D Modelling)</span>
                 <span className="skill-chip">Canva</span>
               </div>
             </div>
             <div className="skill-category">
-              <h3 className="skill-category-title">Photography & Editing</h3>
+              <h3 className="skill-category-title">Photography & Photo Editing</h3>
               <div className="skills-chips">
                 <span className="skill-chip">Adobe Lightroom</span>
                 <span className="skill-chip">Adobe Photoshop</span>

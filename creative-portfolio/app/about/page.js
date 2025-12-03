@@ -68,14 +68,15 @@ export default function AboutPage() {
               <h3 className="about-section__title">SKILLS</h3>
               <div className="about-section__content">
                 <div className="skills-chips">
+                  <span className="skill-chip">Digital Marketing</span>
+                  <span className="skill-chip">Search Engine Optimization</span>
+                  <span className="skill-chip">Google Ads</span>
+                  <span className="skill-chip">UI/UX Design</span>
+                  <span className="skill-chip">Social Media Marketing</span>
                   <span className="skill-chip">Photography</span>
                   <span className="skill-chip">Photo Editing</span>
-                  <span className="skill-chip">Adobe Photoshop</span>
-                  <span className="skill-chip">Adobe Lightroom</span>
-                  <span className="skill-chip">Adobe Illustrator</span>
                   <span className="skill-chip">Graphic Design</span>
-                  <span className="skill-chip">Adobe InDesign</span>
-                  <span className="skill-chip">Digital Marketing</span>
+
                 </div>
               </div>
             </div>
