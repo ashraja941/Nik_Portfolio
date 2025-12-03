@@ -6,7 +6,7 @@
   --accent: #BD8C8C;   /* accent */
   --radius: 16px;
   --gap: 16px;
-  --work-bg: #fffaf1;  /* My Work page background - very light grey, almost white */
+  --work-bg: #f9e5d5;  /* My Work page background - very light grey, almost white */
 }
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
