@@ -106,20 +106,18 @@ export const PROJECTS = [
     aspectRatio: '16/9',
     images: [
       // { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761616303/thumbnails/Photography_Portfolio.jpg', alt: 'Main Portfolio' },
-      // Landscape
-      { heading: 'Landscape' },
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439597/MainPortfolio/Landscape_1.jpg', alt: 'Landscape 1' },
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439598/MainPortfolio/Landscape_2.jpg', alt: 'Landscape 2' },
-      // Macro
-      { heading: 'Macro' },
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439599/MainPortfolio/Macro_1.jpg', alt: 'Macro 1' },
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439599/MainPortfolio/Macro_2.jpg', alt: 'Macro 2' },
       // Product
       { heading: 'Product' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439609/MainPortfolio/Product_1.jpg', alt: 'Product 1' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439610/MainPortfolio/Product_2.jpg', alt: 'Product 2' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439612/MainPortfolio/Product_3.jpg', alt: 'Product 3' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439613/MainPortfolio/Product_4.jpg', alt: 'Product 4' },
+
+      // Landscape
+      { heading: 'Landscape' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439597/MainPortfolio/Landscape_1.jpg', alt: 'Landscape 1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439598/MainPortfolio/Landscape_2.jpg', alt: 'Landscape 2' },
+
       // Portraiture - Set 1
       { heading: 'Portraiture' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439600/MainPortfolio/Portraiture_1-1.jpg', alt: 'Portraiture 1-1' },
@@ -137,12 +135,18 @@ export const PROJECTS = [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439607/MainPortfolio/Portraiture_4-1.jpg', alt: 'Portraiture 4-1' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439608/MainPortfolio/Portraiture_4-2.jpg', alt: 'Portraiture 4-2' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439608/MainPortfolio/Portraiture_4-3.jpg', alt: 'Portraiture 4-3' },
+
       // Travel
       { heading: 'Travel' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439618/MainPortfolio/Travel_1.jpg', alt: 'Travel 1' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439619/MainPortfolio/Travel_2.jpg', alt: 'Travel 2' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439619/MainPortfolio/Travel_3.jpg', alt: 'Travel 3' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439620/MainPortfolio/Travel_4.jpg', alt: 'Travel 4' },
+
+      // Macro
+      { heading: 'Macro' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439599/MainPortfolio/Macro_1.jpg', alt: 'Macro 1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1761439599/MainPortfolio/Macro_2.jpg', alt: 'Macro 2' },
     ]
   },
   // 3D Design
