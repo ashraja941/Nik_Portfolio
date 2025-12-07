@@ -85,6 +85,13 @@ export default function Gallery({ projects, layout }) {
 
     const rows = [];
     let currentRow = [];
+    let currentSection = null;
+
+    const getImagesPerRow = (heading) => {
+      if (heading === 'Portraiture') return 3;
+      if (heading === 'Travel') return 4;
+      return 2; // default
+    };
 
     const flushCurrentRow = () => {
       if (!currentRow.length) return;
@@ -98,6 +105,7 @@ export default function Gallery({ projects, layout }) {
     for (const image of project.images) {
       if (image?.heading) {
         flushCurrentRow();
+        currentSection = image.heading;
         rows.push({ type: 'heading', heading: image.heading });
         continue;
       }
@@ -109,8 +117,9 @@ export default function Gallery({ projects, layout }) {
         continue;
       }
 
+      const imagesPerRow = getImagesPerRow(currentSection);
       currentRow.push(image);
-      if (currentRow.length === 2) {
+      if (currentRow.length === imagesPerRow) {
         rows.push({ type: 'multi', images: currentRow });
         currentRow = [];
       }
