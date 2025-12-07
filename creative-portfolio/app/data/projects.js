@@ -308,12 +308,11 @@ export const LAYOUT = {
     { heading: 'Marketing Campaigns' },
     { slug: 'rna-project'},
     { slug: 'rasoi'},
-    { heading: 'Photography' },
+    { heading: 'Photography & Design' },
     { slug: 'main-portfolio', span: { md: 2, lg: 2 } },
     { slug: 'portraiture-set-1' },
     { slug: 'portraiture-set-2' },
     { slug: 'antelope-canyon'},
-    { heading: 'Other' },
     { slug: 'magazine-collection'},
     { slug: '3d-design'},
   ]
