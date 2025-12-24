@@ -301,6 +301,33 @@ export const PROJECTS = [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1764792958/RNA%20Project/63.jpg', alt: 'RNA Project 63' },
     ]
   },
+  // CafeLaVie
+  {
+    slug: 'cafe-la-vie',
+    title: 'Brand Identity Design',
+    subtitle: 'A Visual Identity Design for a fictional Cafe. ',
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612582/CafeLaVie/1.jpg', alt: 'Cafe La Vie' },
+    aspectRatio: '4/3',
+    images: [
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612582/CafeLaVie/1.jpg', alt: 'Cafe La Vie 1', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612589/CafeLaVie/2.jpg', alt: 'Cafe La Vie 2', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612590/CafeLaVie/3.jpg', alt: 'Cafe La Vie 3', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612591/CafeLaVie/4.jpg', alt: 'Cafe La Vie 4', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612591/CafeLaVie/5.jpg', alt: 'Cafe La Vie 5', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612592/CafeLaVie/6.jpg', alt: 'Cafe La Vie 6', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612593/CafeLaVie/7.jpg', alt: 'Cafe La Vie 7', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612593/CafeLaVie/8.jpg', alt: 'Cafe La Vie 8', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612582/CafeLaVie/10.jpg', alt: 'Cafe La Vie 10', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612583/CafeLaVie/11.jpg', alt: 'Cafe La Vie 11', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612584/CafeLaVie/12.jpg', alt: 'Cafe La Vie 12', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612584/CafeLaVie/13.jpg', alt: 'Cafe La Vie 13', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612585/CafeLaVie/14.jpg', alt: 'Cafe La Vie 14', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612586/CafeLaVie/15.jpg', alt: 'Cafe La Vie 15', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612587/CafeLaVie/16.jpg', alt: 'Cafe La Vie 16', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612588/CafeLaVie/17.jpg', alt: 'Cafe La Vie 17', layout: { colSpan: 2 } },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612589/CafeLaVie/18.jpg', alt: 'Cafe La Vie 18', layout: { colSpan: 2 } },
+    ]
+  },
 ];
 
 export const LAYOUT = {
@@ -310,6 +337,7 @@ export const LAYOUT = {
     { slug: 'rasoi'},
     { heading: 'Photography & Design' },
     { slug: 'main-portfolio', span: { md: 2, lg: 2 } },
+    { slug: 'cafe-la-vie'},
     { slug: 'portraiture-set-1' },
     { slug: 'portraiture-set-2' },
     { slug: 'antelope-canyon'},
