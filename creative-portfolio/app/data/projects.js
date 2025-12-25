@@ -306,7 +306,7 @@ export const PROJECTS = [
     slug: 'cafe-la-vie',
     title: 'Brand Identity Design',
     subtitle: 'A Visual Identity Design for a fictional Cafe. ',
-    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612582/CafeLaVie/1.jpg', alt: 'Cafe La Vie' },
+    cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766679529/CafeLaVieThumbnail_wsqsev.jpg', alt: 'Cafe La Vie' },
     aspectRatio: '4/3',
     images: [
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1766612582/CafeLaVie/1.jpg', alt: 'Cafe La Vie 1', layout: { colSpan: 2 } },
