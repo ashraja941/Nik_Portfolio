@@ -267,13 +267,35 @@ export default function Gallery({ projects, layout }) {
                     const widthPercent = isMulti && safeTotalRatio
                       ? `${(ratio / safeTotalRatio) * 100}%`
                       : '100%';
+                    
+                    // For single or full-width images, apply max-height if specified or if image is vertical
+                    const isSingle = row.type === 'single';
+                    const isFull = row.type === 'full';
+                    const maxHeight = image?.layout?.maxHeight;
+                    const isVertical = ratio < 1;
+                    const figureStyle = {};
+                    const imgStyle = {};
+                    
+                    if (isMulti) {
+                      figureStyle.flexBasis = widthPercent;
+                      figureStyle.maxWidth = widthPercent;
+                    } else if (isSingle || isFull) {
+                      // Apply max-height directly to the image for single or full-width images
+                      if (maxHeight) {
+                        imgStyle.maxHeight = typeof maxHeight === 'number' ? `${maxHeight}px` : maxHeight;
+                      } else if (isVertical) {
+                        // Default max-height for vertical images: 80vh or container-based
+                        imgStyle.maxHeight = '80vh';
+                      }
+                    }
+                    
                     return (
                       <figure
                         key={`${rowIndex}-${imageIndex}`}
                         className="lightbox__figure"
-                        style={isMulti ? { flexBasis: widthPercent, maxWidth: widthPercent } : undefined}
+                        style={Object.keys(figureStyle).length > 0 ? figureStyle : undefined}
                       >
-                         <img src={image.url} alt={image.alt || ''} />
+                         <img src={image.url} alt={image.alt || ''} style={Object.keys(imgStyle).length > 0 ? imgStyle : undefined} />
                       </figure>
                     );
                   })}

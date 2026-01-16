@@ -336,7 +336,7 @@ export const PROJECTS = [
     cover: { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1768525963/ThumbnailMagazine/cover_actual.jpg', alt: 'Thumbnail Magazine 2024-25' },
     aspectRatio: '4/3',
     images: [
-      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1768525965/ThumbnailMagazine/Thumbnail_2024-25_page-0001.jpg', alt: 'Page 1' },
+      { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1768525965/ThumbnailMagazine/Thumbnail_2024-25_page-0001.jpg', alt: 'Page 1', layout: { colSpan: 2, maxHeight: '60vh' } },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1768525985/ThumbnailMagazine/Thumbnail_2024-25_page-002.jpg', alt: 'Page 2' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1768525966/ThumbnailMagazine/Thumbnail_2024-25_page-0003.jpg', alt: 'Page 3' },
       { url: 'https://res.cloudinary.com/dzc77rfds/image/upload/v1768525967/ThumbnailMagazine/Thumbnail_2024-25_page-0004.jpg', alt: 'Page 4' },
